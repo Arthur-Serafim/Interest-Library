@@ -1,7 +1,6 @@
-const Interest = require('./Interest')
+const Interest = require("./Interest");
 
 class SimpleInterest extends Interest {
-
   getAmount() {
     this.amount = this.principal + this.tax;
   }
@@ -43,10 +42,20 @@ class SimpleInterest extends Interest {
       ) {
         // Populate tax field
         this.getTax();
-      } else if (!this.time && this.tax && this.principal && this.taxPercentage) {
+      } else if (
+        !this.time &&
+        this.tax &&
+        this.principal &&
+        this.taxPercentage
+      ) {
         // Populate time field
         this.getTime();
-      } else if (!this.taxPercentage && this.tax && this.principal && this.time) {
+      } else if (
+        !this.taxPercentage &&
+        this.tax &&
+        this.principal &&
+        this.time
+      ) {
         // Populate tax percentage field
         this.getTaxPercentage();
       } else if (
@@ -77,4 +86,4 @@ class SimpleInterest extends Interest {
   }
 }
 
-module.exports = SimpleInterest
+module.exports = SimpleInterest;

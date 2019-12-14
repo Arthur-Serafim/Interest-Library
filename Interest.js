@@ -8,7 +8,7 @@ class Interest {
     this.error = {
       status: false,
       messages: []
-    }
+    };
   }
 
   handleError() {
@@ -51,7 +51,10 @@ class Interest {
     if (this.principal > this.amount) {
       this.error = {
         status: true,
-        messages: [...this.error.messages, "Principal can't be higher than amount"]
+        messages: [
+          ...this.error.messages,
+          "Principal can't be higher than amount"
+        ]
       };
     }
   }
