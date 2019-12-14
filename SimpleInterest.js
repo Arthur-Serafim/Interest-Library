@@ -1,9 +1,6 @@
 const Interest = require('./Interest')
 
 class SimpleInterest extends Interest {
-  // Tax = principal * TaxPercentage * Time
-  // Amount = principal + Tax
-  // AMOUNT principal TAX
 
   getAmount() {
     this.amount = this.principal + this.tax;
